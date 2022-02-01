@@ -1,9 +1,11 @@
+import '../App.css';
+
 const ConfigPage = () => {
   return (
-    <main>
-      <span className="fas fa-cog"></span>
-      <div>
-        <label htmlFor="work">Time to work</label>
+    <main className="container">
+      <span className="fas fa-cog config-icon"></span>
+      <div className="box-settings">
+        <label className="instruction-settings" htmlFor="work">Time to work</label>
         <select id="work">
           <option value="15">15 Minutes</option>
           <option value="20">20 Minutes</option>
@@ -11,9 +13,8 @@ const ConfigPage = () => {
           <option value="30">30 Minutes</option>
         </select>
       </div>
-      <input type="text" placeholder="Write a task to do"/>
-      <div>
-        <label htmlFor="rest">Time to rest</label>
+      <div className="box-settings">
+        <label className="instruction-settings" htmlFor="rest">Time to rest</label>
         <select id="rest">
           <option value="15">5 Minutes</option>
           <option value="20">10 Minutes</option>
@@ -21,7 +22,8 @@ const ConfigPage = () => {
           <option value="30">20 Minutes</option>
         </select>
       </div>
-      <button>Go</button>
+      <input type="text" placeholder="Write what you have to do"/>
+      <button className="btn">Go</button>
     </main>
   );
 };

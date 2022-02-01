@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -18,49 +18,188 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 25px;
+  background-color: #262626;
 }
 
 .title-home {
   text-align: center;
-  font-size: 35px;
-  padding: 25px;
-  margin: 12px;
-  background-color: #BA181B;
-  border-radius: 6px;
+  padding: 15px;
+  font-size: 32px;
   color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-}
-
-.img-home {
-  width: 320px;
+  margin: 20px 0px;
+  border-bottom: 1px solid gray;
 }
 
 .instruction-home {
+  padding: 12px;
   text-align: center;
   font-size: 22px;
-  padding: 25px;
-  margin: 12px;
-  border-radius: 6px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  margin: 8px 0px;
+  color: #fff;
+}
+
+.img-home {
+  height: 320px;
 }
 
 .btn {
   padding: 12px 26px;
-  margin: 10px;
+  margin: 15px 15px;
   border-radius: 6px;
-  background-color: #BA181B;
+  background-color: #ba181b;
   border: none;
   color: #fff;
   font-size: 18px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   cursor: pointer;
+  outline: none;
 }
 
 .btn:hover {
-  background-color: #a7171a;
+  background-color: #961417;
+}
+
+.config-icon {
+  font-size: 8rem;
+  color: #fff;
+  margin-bottom: 30px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  border-radius: 6px;
+  padding: 25px;
+  background-color: #ba181b;
+}
+
+.box-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.instruction-settings {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 22px;
+  color: #fff;
+}
+
+select {
+  padding: 10px 14px;
+  border-radius: 25px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+input {
+  padding: 10px 14px;
+  border-radius: 25px;
+  font-size: 16px;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  width: 230px;
+}
+
+.social {
+  border: 1px solid black;
+  font-size: 3rem;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  margin: 25px 0px;
+  border-bottom: 1px solid gray;
+}
+
+.clock h1 {
+  font-size: 7rem;
+  padding: 25px;
+}
+
+.clock h4 {
+  font-size: 32px;
+  padding-bottom: 16px;
+}
+
+.controls {
+  padding: 10px;
+}
+
+.control {
+  padding: 22px;
+  margin: 15px 15px;
+  border-radius: 50%;
+  background-color: #ba181b;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.control:hover {
+  background-color: #961417;
+}
+
+.socials {
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.social {
+  padding: 20px;
+  margin: 5px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: gray;
+}
+
+#twitter:hover {
+  color: #1EA1F2;
+}
+
+#instagram:hover {
+  color: #DB7093;
+}
+
+#github:hover {
+  color: #778899;
+}
+
+.author {
+  font-size: 20px;
+  color: gray;
 }
 /*# sourceMappingURL=App.css.map */

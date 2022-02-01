@@ -1,35 +1,34 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-$primary: #BA181B;
+$primary: #ba181b;
 $alignText: center;
-$h1Font: 35px;
+$h1Font: 32px;
 $pFont: 22px;
 $radius: 6px;
+$radiusXl: 25px;
 $shadowBox: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-
-@mixin spacePadding {
-  padding: 25px;
-  margin: 12px;
-}
+$paddingFont: 15px;
 
 @mixin containers {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 25px;
+  background-color: #262626;
 }
 
-@mixin alignElements {
+@mixin alignElements($justify) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: $justify;
 }
 
-@mixin buttonPrimary {
-  padding: 12px 26px;
-  margin: 10px;
+@mixin buttonPrimary($padding, $radius) {
+  padding: $padding;
+  margin: 15px 15px;
   border-radius: $radius;
   background-color: $primary;
   border: none;
@@ -37,49 +36,157 @@ $shadowBox: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   font-size: 18px;
   box-shadow: $shadowBox;
   cursor: pointer;
+  outline: none;
 }
 
 @mixin buttonPrimaryHover {
-  background-color: #a7171a;
+  background-color: #961417;
+}
+
+@mixin inputs {
+  padding: 10px 14px;
+  border-radius: $radiusXl;
+  font-size: 16px;
 }
 
 //HomePage
 
-.container{
-  @include alignElements();
+.container {
+  @include alignElements(center);
   @include containers();
 }
 
-.title-home{
+.title-home {
   text-align: $alignText;
+  padding: $paddingFont;
   font-size: $h1Font;
-  @include spacePadding();
-  background-color: $primary;
-  border-radius: $radius;
   color: #fff;
-  box-shadow: $shadowBox;
+  margin: 20px 0px;
+  border-bottom: 1px solid gray;
 }
 
-.img-home{
-  width: 320px;
-}
-
-.instruction-home{
+.instruction-home {
+  padding: 12px;
   text-align: $alignText;
-  font-size: $pFont; 
-  @include spacePadding();
-  border-radius: $radius;
-  box-shadow: $shadowBox;
+  font-size: $pFont;
+  margin: 8px 0px;
+  color: #fff;
 }
 
-.btn{
-  @include buttonPrimary();
+.img-home {
+  height: 320px;
 }
 
-.btn:hover{
+.btn {
+  @include buttonPrimary(12px 26px, $radius);
+}
+
+.btn:hover {
   @include buttonPrimaryHover();
 }
 
 //ConfigPage
 
+.config-icon {
+  font-size: 8rem;
+  color: #fff;
+  margin-bottom: 30px;
+  box-shadow: $shadowBox;
+  border-radius: $radius;
+  padding: 25px;
+  background-color: $primary;
+}
+
+.box-settings {
+  @include alignElements(center);
+}
+
+.instruction-settings {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: $pFont;
+  color: #fff
+}
+
+select {
+  @include inputs();
+  margin: 5px;
+}
+
+input {
+  @include inputs();
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  width: 230px;
+}
+
 //PomodoroPage
+
+.social {
+  border: 1px solid black;
+  font-size: 3rem;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.clock {
+  @include alignElements(space-between);
+  color: #fff;
+  margin: 25px 0px;
+  border-bottom: 1px solid gray;
+
+  h1 {
+    font-size: 7rem;
+    padding: 25px;
+  }
+
+  h4 {
+    font-size: $h1Font;
+    padding-bottom: 16px;
+  }
+}
+
+.controls {
+  padding: 10px;
+}
+
+.control {
+  @include buttonPrimary(22px, 50%);
+}
+
+.control:hover {
+  @include buttonPrimaryHover();
+}
+
+.socials {
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.social {
+  padding: 20px;
+  margin: 5px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: gray;
+}
+
+#twitter:hover {
+  color: #1EA1F2;
+}
+
+#instagram:hover {
+  color: #DB7093;
+}
+
+#github:hover {
+  color: #778899;
+}
+
+.author {
+  font-size: 20px;
+  color: gray;
+}
