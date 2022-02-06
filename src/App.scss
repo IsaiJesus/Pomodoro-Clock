@@ -35,8 +35,9 @@ $paddingFont: 15px;
   color: #fff;
   font-size: 18px;
   box-shadow: $shadowBox;
-  cursor: pointer;
+  text-decoration: none;
   outline: none;
+  cursor: pointer;
 }
 
 @mixin buttonPrimaryHover {
@@ -52,7 +53,7 @@ $paddingFont: 15px;
 //HomePage
 
 .container {
-  @include alignElements(center);
+  @include alignElements(start);
   @include containers();
 }
 
@@ -90,7 +91,7 @@ $paddingFont: 15px;
 .config-icon {
   font-size: 8rem;
   color: #fff;
-  margin-bottom: 30px;
+  margin: 30px 0px 25px 0px;
   box-shadow: $shadowBox;
   border-radius: $radius;
   padding: 25px;
@@ -128,7 +129,7 @@ input {
   font-size: 3rem;
   padding: 10px;
   background-color: #fff;
-  cursor: pointer;
+  text-decoration: none
 }
 
 .clock {
@@ -148,6 +149,17 @@ input {
   }
 }
 
+.task {
+  padding: $paddingFont;
+  margin-bottom: 12px;
+  font-size: 20px;
+
+  span {
+    padding-left: 10px;
+    font-size: $pFont;
+  }
+}
+
 .controls {
   padding: 10px;
 }
@@ -158,6 +170,30 @@ input {
 
 .control:hover {
   @include buttonPrimaryHover();
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $pFont;
+  padding: $paddingFont;
+  margin: 8px;
+}
+
+.back a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
+
+.back-cog {
+  padding-left: 10px;
+  font-size: 18px;
 }
 
 .socials {
