@@ -13,7 +13,7 @@ const PomodoroPage = () => {
         <h1>05:00</h1>
         <h4>Working...</h4>
         <p className="task">
-          Your task: Ejemplo <span className="fas fa-pencil-alt"></span>
+          Your task: {settings.task}<span className="fas fa-pencil-alt"></span>
         </p>
       </div>
       <div className="controls">

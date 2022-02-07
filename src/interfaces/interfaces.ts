@@ -5,5 +5,5 @@ export interface SettingsProviderProps {
 export interface SettingsState {
   work: number;
   rest: number;
-  task: string;
+  task: string | null;
 }

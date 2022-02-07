@@ -12,7 +12,7 @@ const SettingsContext = createContext<SettingsContextProps>({} as SettingsContex
 const initialSettings: SettingsState = {
   work: 25,
   rest: 5,
-  task: ""
+  task: window.localStorage.getItem("task")
 }
 
 const SettingsProvider = ({children}: SettingsProviderProps) => {
@@ -21,6 +21,9 @@ const SettingsProvider = ({children}: SettingsProviderProps) => {
 
   const handleChange = ({ target: { name, value }}: HandleChange) => {
     setSettings({ ...settings, [name]: value });
+    if(name === "task" ) {
+      window.localStorage.setItem("task", value);
+    }
   }
 
   return (
