@@ -20,7 +20,7 @@
           justify-content: start;
   min-height: 100vh;
   padding: 25px;
-  background-color: #262626;
+  background-color: #001326;
 }
 
 .title-home {
@@ -29,7 +29,7 @@
   font-size: 32px;
   color: #fff;
   margin: 20px 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #BABCBE;
 }
 
 .instruction-home {
@@ -46,9 +46,9 @@
 
 .btn {
   padding: 12px 26px;
-  margin: 15px 15px;
+  margin: 15px;
   border-radius: 6px;
-  background-color: #ba181b;
+  background-color: #3253DC;
   border: none;
   color: #fff;
   font-size: 18px;
@@ -56,11 +56,10 @@
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   text-decoration: none;
   outline: none;
-  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #961417;
+  background-color: #2749d1;
 }
 
 .config-icon {
@@ -71,7 +70,7 @@
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   border-radius: 6px;
   padding: 25px;
-  background-color: #ba181b;
+  background-color: #3253DC;
 }
 
 .box-settings {
@@ -138,7 +137,7 @@ input {
           justify-content: space-between;
   color: #fff;
   margin: 25px 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #BABCBE;
 }
 
 .clock h1 {
@@ -149,6 +148,7 @@ input {
 .clock h4 {
   font-size: 32px;
   padding-bottom: 16px;
+  color: #3253DC;
 }
 
 .task {
@@ -164,13 +164,22 @@ input {
 
 .controls {
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .control {
-  padding: 22px;
-  margin: 15px 15px;
+  padding: 30px;
+  margin: 15px;
   border-radius: 50%;
-  background-color: #ba181b;
+  background-color: #3253DC;
   border: none;
   color: #fff;
   font-size: 18px;
@@ -178,11 +187,22 @@ input {
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   text-decoration: none;
   outline: none;
+  height: 20px;
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 
 .control:hover {
-  background-color: #961417;
+  background-color: #2749d1;
 }
 
 .back {
@@ -226,7 +246,7 @@ input {
   font-size: 30px;
   background: none;
   border: none;
-  color: gray;
+  color: #288BFF;
 }
 
 #twitter:hover {
@@ -243,6 +263,6 @@ input {
 
 .author {
   font-size: 20px;
-  color: gray;
+  color: #288BFF;
 }
 /*# sourceMappingURL=App.css.map */

@@ -10,16 +10,15 @@ const PomodoroPage = () => {
   return (
     <main className="container">
       <div className="clock">
-        <h1>05:00</h1>
+        <h1>{settings.work}:00</h1>
         <h4>Working...</h4>
         <p className="task">
           Your task: {settings.task}<span className="fas fa-pencil-alt"></span>
         </p>
       </div>
       <div className="controls">
-        <button className="fas fa-redo-alt control"></button>
         <button className="fas fa-play control"></button>
-        <button className="fas fa-stop control"></button>
+        <button className="fas fa-redo-alt control"></button>
       </div>
       <div className="back">
         <Link to="/settings">

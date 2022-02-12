@@ -10,7 +10,7 @@ type HandleChange = ChangeEvent<HTMLInputElement | HTMLSelectElement>;
 const SettingsContext = createContext<SettingsContextProps>({} as SettingsContextProps);
 
 const initialSettings: SettingsState = {
-  work: 25,
+  work: 15,
   rest: 5,
   task: window.localStorage.getItem("task")
 }
@@ -21,7 +21,7 @@ const SettingsProvider = ({children}: SettingsProviderProps) => {
 
   const handleChange = ({ target: { name, value }}: HandleChange) => {
     setSettings({ ...settings, [name]: value });
-    if(name === "task" ) {
+    if(name === "task") {
       window.localStorage.setItem("task", value);
     }
   }
