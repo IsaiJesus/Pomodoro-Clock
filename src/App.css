@@ -167,12 +167,31 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.start {
+  padding: 15px 28px;
+  margin: 15px;
+  border-radius: 6px;
+  background-color: #3253DC;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .control {
