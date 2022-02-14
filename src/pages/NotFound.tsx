@@ -8,7 +8,7 @@ const NotFound = () => {
       <h2 className="subtitle-404">Page not found</h2>
       <img className="img-404" src="/images/notFound.png" alt="404"/>
       <p className="instruction-home">This page doesn't exist or was removed. We suggest you back home page.</p>
-      <Link to="/" className="btn">Go Home Page</Link>
+      <Link to="/pomodoro" className="btn">Go Pomodoro Page</Link>
     </main>
   );
 };
