@@ -1,9 +1,11 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import SettingsContext from "../context/SettingsContext";
 import { Link } from "react-router-dom";
 import "../App.css";
 
 const PomodoroPage = () => {
+
+  const audioEl = useRef<HTMLAudioElement | null>(null);
 
   const { settings } = useContext(SettingsContext);
 
@@ -70,9 +72,11 @@ const PomodoroPage = () => {
 
   useEffect(() => {
     if(toggleTime){
-      document.title = "Time to work | Pomodoro Clock"
+      document.title = "Time to work | Pomodoro Clock";
+      audioEl.current?.play();
     }else{
-      document.title = "Time to rest | Pomodoro Clock"
+      document.title = "Time to rest | Pomodoro Clock";
+      audioEl.current?.play();
     }
   }, [toggleTime]);
 
@@ -104,6 +108,10 @@ const PomodoroPage = () => {
             </div>
         }
       </div>
+      <audio ref={audioEl}>
+        <source src="/audio/alarm.mp3" type="audio/mpeg"/>
+        Your browser does not support the audio element.
+      </audio>
       <div className="back">
         <Link to="/settings">
           Back to settings <span className="fas fa-cog back-cog"></span>
