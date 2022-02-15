@@ -169,6 +169,12 @@ input {
   justify-content: center;
 }
 
+.controls-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .start{
   @include buttonPrimary(15px 28px, $radius);
   cursor: pointer;

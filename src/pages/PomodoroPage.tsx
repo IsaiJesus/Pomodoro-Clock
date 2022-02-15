@@ -86,14 +86,22 @@ const PomodoroPage = () => {
         </p>
       </div>
       <div className="controls">
-        <button 
-          onClick={toggleTime ? handleWork : handleRest} 
-          className="start">
-            Start {toggleTime ? "work" : "rest"}
-        </button>
-        {buttonActivate 
-          ? <button onClick={handlePlay} className="fas fa-play control"></button>
-          : <button onClick={handlePause} className="fas fa-pause control"></button>
+        {seconds <= 0 && minutes === 0
+          ? <button 
+              onClick={toggleTime ? handleWork : handleRest} 
+              className="start">
+                Start {toggleTime ? "work" : "rest"}
+            </button>
+          : <div className="controls-btn">
+              <button 
+                onClick={buttonActivate ? handlePlay : handlePause} 
+                className={buttonActivate ? "fas fa-play control" : "fas fa-pause control"}>
+              </button>
+              <button 
+                onClick={toggleTime ? handleWork : handleRest} 
+                className="fas fa-redo-alt control">
+              </button>
+            </div>
         }
       </div>
       <div className="back">
