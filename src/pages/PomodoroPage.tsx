@@ -55,7 +55,7 @@ const PomodoroPage = () => {
     setButtonActivate(true);
   };
 
-  //reset time to initial time and start the countdown
+  //start or restart timer to counterM from context and start the countdown
   const handleWork = () => {
     counterS = 0;
     counterM = work;
@@ -70,13 +70,15 @@ const PomodoroPage = () => {
     handlePlay();
   }
 
+  //change title and play the sound when time is 0
   useEffect(() => {
+    if(seconds <= 0 && minutes === 0){
+      audioEl.current?.play();
+    }
     if(toggleTime){
       document.title = "Time to work | Pomodoro Clock";
-      audioEl.current?.play();
     }else{
       document.title = "Time to rest | Pomodoro Clock";
-      audioEl.current?.play();
     }
   }, [toggleTime]);
 
