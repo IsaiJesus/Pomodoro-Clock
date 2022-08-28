@@ -5,9 +5,9 @@ import "../App.css";
 
 const ConfigPage = () => {
   const { handleChange } = useContext(SettingsContext);
-
+  
   return (
-    <main className="container">
+    <form className="container">
       <span className="fas fa-cog config-icon"></span>
       <div className="box-settings">
         <label className="instruction-settings" htmlFor="work">
@@ -41,7 +41,7 @@ const ConfigPage = () => {
       <Link className="btn" to="/pomodoro">
         Go
       </Link>
-    </main>
+    </form>
   );
 };
 

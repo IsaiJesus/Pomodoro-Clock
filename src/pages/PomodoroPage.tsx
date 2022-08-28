@@ -110,15 +110,15 @@ const PomodoroPage = () => {
             </div>
         }
       </div>
-      <audio ref={audioEl}>
-        <source src="/audio/alarm.mp3" type="audio/mpeg"/>
-        Your browser does not support the audio element.
-      </audio>
       <div className="back">
         <Link to="/settings">
           Back to settings <span className="fas fa-cog back-cog"></span>
         </Link>
       </div>
+      <audio className="audio-player" controls controlsList="nodownload noplaybackrate" ref={audioEl}>
+        <source src="/audio/alarm.mp3" type="audio/mpeg"/>
+        Your browser does not support the audio element.
+      </audio>
       <div className="socials">
         <a
           href="https://twitter.com/isaijesus02"

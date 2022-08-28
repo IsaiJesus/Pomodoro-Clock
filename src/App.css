@@ -5,19 +5,10 @@
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
   min-height: 100vh;
   padding: 25px;
   background-color: #001326;
@@ -52,8 +43,7 @@
   border: none;
   color: #fff;
   font-size: 18px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   text-decoration: none;
   outline: none;
 }
@@ -66,27 +56,17 @@
   font-size: 8rem;
   color: #fff;
   margin: 30px 0px 25px 0px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   border-radius: 6px;
   padding: 25px;
   background-color: #3253DC;
 }
 
 .box-settings {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .instruction-settings {
@@ -113,6 +93,47 @@ input {
   width: 230px;
 }
 
+.audio-player {
+  margin: 20px 0px 10px 0px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #3253DC;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  color: #fff;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+audio::-webkit-media-controls-timeline {
+  background-color: #fff;
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #fff;
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+audio::-webkit-media-controls-mute-button {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 .social {
   border: 1px solid black;
   font-size: 3rem;
@@ -122,29 +143,18 @@ input {
 }
 
 .clock {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   color: #fff;
   margin: 25px 0px;
   border-bottom: 1px solid #BABCBE;
 }
-
 .clock h1 {
   font-size: 7rem;
   padding: 25px;
 }
-
 .clock h4 {
   font-size: 32px;
   padding-bottom: 16px;
@@ -157,7 +167,6 @@ input {
   font-size: 20px;
   text-align: center;
 }
-
 .task span {
   padding-left: 10px;
   font-size: 22px;
@@ -165,31 +174,16 @@ input {
 
 .controls {
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .controls-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .start {
@@ -200,8 +194,7 @@ input {
   border: none;
   color: #fff;
   font-size: 18px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   text-decoration: none;
   outline: none;
   cursor: pointer;
@@ -215,21 +208,14 @@ input {
   border: none;
   color: #fff;
   font-size: 18px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   text-decoration: none;
   outline: none;
   height: 20px;
   width: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -238,15 +224,9 @@ input {
 }
 
 .back {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-size: 22px;
   padding: 15px;
   margin: 8px;
@@ -315,5 +295,4 @@ input {
 
 .img-404 {
   width: 320px;
-}
-/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=App.css.map */
