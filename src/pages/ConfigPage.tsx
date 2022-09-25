@@ -1,13 +1,21 @@
-import { useContext } from "react";
-import SettingsContext from "../context/SettingsContext";
-import { Link } from "react-router-dom";
-import "../App.css";
+import { useContext, ChangeEvent } from 'react';
+import SettingsContext from '../context/SettingsContext';
+import { Link } from 'react-router-dom';
+import '../App.css';
+import { useNavigate } from 'react-router-dom';
 
 const ConfigPage = () => {
   const { handleChange } = useContext(SettingsContext);
+
+  const navigate = useNavigate();
+  type HandleChange = ChangeEvent<HTMLFormElement>;
+  const handleSubmit = (e : HandleChange) => {
+    e.preventDefault();
+    navigate("/pomodoro");
+  }
   
   return (
-    <form className="container">
+    <form onSubmit={handleSubmit} className="container">
       <span className="fas fa-cog config-icon"></span>
       <div className="box-settings">
         <label className="instruction-settings" htmlFor="work">
